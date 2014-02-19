@@ -3,8 +3,8 @@ class MyHash
     @array = Array.new(64)
   end
 
-  def find_index
-
+  def find_index(key)
+    key % 64
   end
 
   def [](param)
