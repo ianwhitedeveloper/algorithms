@@ -8,7 +8,10 @@ class MyHash
   end
 
   def [](key)
-    @array[find_index(key)]
+    pair = @array[find_index(key)]
+    if pair
+      pair.last
+    end
   end
 
   def []=(key, value)
