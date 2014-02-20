@@ -7,9 +7,9 @@ class MyHash
     key.hash % 64
   end
 
-  # def [](param)
-
-  # end
+  def [](key)
+    @array[find_index(key)]
+  end
 
   def []=(key, value)
     @array[find_index(key)] = [value]
