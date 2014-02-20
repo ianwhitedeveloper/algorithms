@@ -4,14 +4,14 @@ class MyHash
   end
 
   def find_index(key)
-    key % 64
+    key.hash % 64
   end
 
-  def [](param)
+  # def [](param)
 
-  end
+  # end
 
   def []=(key, value)
-
+    @array[find_index(key)] = [value]
   end
 end
