@@ -11,16 +11,28 @@ describe 'Sort' do
       end
     end
 
-    context 'when the argument is an array positive integers' do
-      it 'returns an array sorted lowest to highest' do
-        expect(Sort.selection_sort([100, 3, 2, 1])).to eq([1, 2, 3, 100])
+    context 'when the argument has 1 element' do
+      it 'returns an array with one element' do
+        expect(Sort.selection_sort([100])).to eq([100])
       end
     end
 
-    context 'when the argument is an array of negative integers mixed with positive' do
-      it 'returns an array sorted lowest to highest' do
-        expect(Sort.selection_sort([-3, 2, -1, 10])).to eq([-3, -1, 2, 10])
+    context 'when the argument is an array of sorted elements' do
+      it 'returns sorted array' do
+        expect(Sort.selection_sort([1, 2, 3, 4, 5])).to eq([1, 2, 3, 4, 5])
+      end
+    end
 
+   context 'when the argument is an array of unsorted elements' do
+      it 'returns sorted array' do
+        expect(Sort.selection_sort([5, 4, 3, 2, 1])).to eq([1, 2, 3, 4, 5])
+      end
+    end
+
+    context 'when the argument large and randomized' do
+      it 'returns sorted array' do
+        array = Array.new(1000) {rand(1000)}
+        expect(Sort.selection_sort(array)).to eq(array.sort)
       end
     end
   end
