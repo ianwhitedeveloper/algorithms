@@ -19,4 +19,8 @@ module Sort
     array[min_index] = array[i]
     array[i] = min
   end
+
+  def self.merge(array1, array2)
+
+  end
 end

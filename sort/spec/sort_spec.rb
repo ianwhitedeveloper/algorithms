@@ -37,7 +37,7 @@ describe 'Sort' do
     end
   end
 
-  describe "Merge Sort" do
+  describe "Sort.merge" do
     context 'when given two sorted arrays' do
       it 'returns one sorted array' do
         array1 = [4, 6, 8, 20, 22]
