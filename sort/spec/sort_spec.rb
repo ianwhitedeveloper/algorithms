@@ -36,4 +36,15 @@ describe 'Sort' do
       end
     end
   end
+
+  describe "Merge Sort" do
+    context 'when given two sorted arrays' do
+      it 'returns one sorted array' do
+        array1 = [4, 6, 8, 20, 22]
+        array2 = [2, 9, 10, 11]
+
+        expect(Sort.merge_sort(array1, array2)).to eq([2, 4, 6, 8, 9, 10, 11, 20, 22])
+      end
+    end
+  end
 end
