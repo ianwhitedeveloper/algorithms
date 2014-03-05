@@ -23,7 +23,9 @@ module Sort
   def self.merge(array1, array2)
     results = []
     i1 = i2 =0
-    while i1 < array1.length && i2 < array2.length  # haven't reached end of either array
+    # haven't reached end of either array
+    # entire while condition is false if EITHER side has reached the end of array1 or array2
+    while i1 < array1.length && i2 < array2.length
       if array1[i1] < array2[i2]
         results << array1[i1]
         i1 += 1
@@ -40,5 +42,8 @@ module Sort
     else
       results.concat(array1[i1..-1])
     end
+    # Shehzan's solution for above.
+    # results += array1[i1..-1]
+    # results += array2[i2..-1]
   end
 end
