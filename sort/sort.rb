@@ -23,7 +23,7 @@ module Sort
   def self.merge(array1, array2)
     results = []
     i1 = i2 =0
-    while i1 != array1.length && i2 != array2.length  # haven't reached end of either array
+    while i1 < array1.length && i2 < array2.length  # haven't reached end of either array
       if array1[i1] < array2[i2]
         results << array1[i1]
         i1 += 1
