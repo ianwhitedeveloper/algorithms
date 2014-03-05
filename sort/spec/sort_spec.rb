@@ -47,4 +47,30 @@ describe 'Sort' do
       end
     end
   end
+
+  describe "Sort.mergesort" do
+    context 'when given an argument with only 1 element' do
+      it 'returns an array with 1 element' do
+        array = [1]
+
+        expect(Sort.mergesort(array)).to eq([1])
+      end
+    end
+
+    context 'when given one unsorted array' do
+      it 'returns one sorted array' do
+        array = [4,5,6,1,2,3]
+
+        expect(Sort.mergesort(array)).to eq([1,2,3,4,5,6])
+      end
+    end
+
+    context 'when given one unsorted array' do
+      it 'returns one sorted array' do
+        array = [10,3,0,50,1,6]
+
+        expect(Sort.mergesort(array)).to eq([0, 1, 3, 6, 10, 50])
+      end
+    end
+  end
 end
