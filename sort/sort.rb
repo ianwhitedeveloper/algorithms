@@ -35,6 +35,8 @@ module Sort
 
     if i1 == array1.length
       results.concat(array2[i2..-1])
+      # same as above, but using slice method
+      # results.concat(array2.slice(i2..-1))
     else
       results.concat(array1[i1..-1])
     end
